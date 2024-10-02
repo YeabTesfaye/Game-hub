@@ -1,21 +1,26 @@
-import { Button, useToast } from "@chakra-ui/react";
+import { Grid, GridItem, Show } from "@chakra-ui/react";
+import NavBar from "./components/NavBar";
 
 function App() {
-  const toast = useToast();
   return (
-    <Button
-      onClick={() =>
-        toast({
-          title: "Account created.",
-          description: "We've created your account for you.",
-          status: "success",
-          duration: 9000,
-          isClosable: true,
-        })
-      }
+    <Grid
+      templateAreas={{
+        base: `"nav" "main"`,
+        lg: `"nav nav" "aside main"`,
+      }}
     >
-      Show Toast
-    </Button>
+      <GridItem area="nav">
+        <NavBar /> 
+      </GridItem>
+      <Show above="lg">
+        <GridItem area="aside" bg="gray.200" color="red.700">
+          aside 
+        </GridItem>
+        <GridItem area="main" bg="gray.100">
+          main 
+        </GridItem>
+      </Show>
+    </Grid>
   );
 }
 
