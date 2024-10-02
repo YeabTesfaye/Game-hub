@@ -10,16 +10,16 @@ function App() {
       }}
     >
       <GridItem area="nav">
-        <NavBar /> 
+        <NavBar />
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" bg="gray.200" color="red.700">
-          aside 
-        </GridItem>
-        <GridItem area="main" bg="gray.100">
-          main 
+          aside
         </GridItem>
       </Show>
+      <GridItem area="main" bg="gray.100">
+        main
+      </GridItem>
     </Grid>
   );
 }
