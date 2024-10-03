@@ -11,7 +11,7 @@ interface FetchGenresResponse {
   count: number;
   results: Genre[];
 }
-
+ 
 const useGenres = () => {
   const [genres, setGenres] = useState<Genre[]>([]);
   const [error, setError] = useState("");
