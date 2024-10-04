@@ -4,8 +4,6 @@ Here's an improved version of your `README.md` for GameHub:
 
 **GameHub** is a video game discovery web application designed to help users find new and exciting games. You can search for games based on platform, genre, and much more to discover your next favorite title.
 
-This project is built as part of the **Ultimate React** course by [Mosh Hamedani](https://codewithmosh.com). You can access the full course [here](https://codewithmosh.com).
-
 ## Features
 
 - **Game Search**: Search for games by genre, platform, and other filters.
