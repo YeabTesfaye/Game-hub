@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+Here's an improved version of your `README.md` for GameHub:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# GameHub
 
-Currently, two official plugins are available:
+**GameHub** is a video game discovery web application designed to help users find new and exciting games. You can search for games based on platform, genre, and much more to discover your next favorite title.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is built as part of the **Ultimate React** course by [Mosh Hamedani](https://codewithmosh.com). You can access the full course [here](https://codewithmosh.com).
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Game Search**: Search for games by genre, platform, and other filters.
+- **Responsive Design**: Enjoy a seamless experience across devices.
+- **Platform and Genre Filters**: Easily browse games by your favorite platform or genre.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+To run GameHub locally, follow these steps:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [NPM](https://www.npmjs.com/) (or [Yarn](https://yarnpkg.com/))
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Installation Steps
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/YeabTesfaye/gamehub.git
+   cd gamehub
+   ```
+
+2. **Install the dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Get a RAWG API key**:
+
+   - Sign up at [RAWG](https://rawg.io/apidocs) and generate an API key.
+   - Open the `src/services/api-client.ts` file and add your API key:
+     ```typescript
+     const API_KEY = "your-rawg-api-key-here";
+     ```
+
+4. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+   The application should now be running on `http://localhost:3000`.
+
+## Usage
+
+Once the app is up and running, you can:
+
+- **Search for games** using filters such as platform and genre.
+- **Explore game details**, including screenshots and ratings.
+- **Discover new releases** across various gaming platforms.
+
+## Contributing
+
+If you'd like to contribute to the project, feel free to submit a pull request or report issues in the repository.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
